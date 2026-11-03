@@ -1,5 +1,4 @@
-# Classic 4x4 Wumpus world from AIMA (Figure 7.2).
-# (1, 1) is the bottom-left cave. The agent starts there, facing east.
+# Cueva 4x4 propia. (1, 1) es la esquina inferior izquierda.
 
 grid:
   width: 4
@@ -10,12 +9,11 @@ agent:
   direction: east
   arrows: 1
 
-wumpus: [3, 4]
+wumpus: [4, 1]
 
 pits:
+  - [2, 2]
   - [3, 2]
-  - [4, 2]
-  - [2,3]
 
 gold: [4, 4]
 
