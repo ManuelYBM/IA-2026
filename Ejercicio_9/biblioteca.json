@@ -1,0 +1,17 @@
+{
+  "hechos": [
+    "Estudiante(Ana)",
+    "Estudiante(Luis)",
+    "Profesor(Marta)",
+    "TieneCredencial(Ana)",
+    "TieneCredencial(Marta)",
+    "HorarioNocturno(Hoy)"
+  ],
+  "reglas": [
+    {"id": "R_miembro_est", "si": ["Estudiante(x)", "TieneCredencial(x)"], "entonces": "Miembro(x)"},
+    {"id": "R_miembro_prof", "si": ["Profesor(x)"], "entonces": "Miembro(x)"},
+    {"id": "R_acceso", "si": ["Miembro(x)", "HorarioNocturno(Hoy)"], "entonces": "AccesoNoche(x)"},
+    {"id": "R_beca", "si": ["Estudiante(x)", "TieneCredencial(x)"], "entonces": "Becario(x)"}
+  ],
+  "consultas": ["AccesoNoche(Ana)", "AccesoNoche(Luis)", "AccesoNoche(Marta)"]
+}
